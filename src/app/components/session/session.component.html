@@ -1,0 +1,27 @@
+@if(session){
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{
+      session.date.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit"
+      })
+    }}</mat-card-title>
+    <mat-card-subtitle
+      >Duração: {{ session.durationInMinutes }} mins</mat-card-subtitle
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ session.therapist }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <!-- <button mat-button>LIKE</button> -->
+    <button mat-button (click)="openDialog()">
+      <mat-icon>queue</mat-icon> Reservar
+    </button>
+  </mat-card-actions>
+</mat-card>
+<!-- <mat-divider></mat-divider> -->
+}

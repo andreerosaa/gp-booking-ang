@@ -1,0 +1,13 @@
+@if(!isSearching){
+<section>
+  <nav @if daySessions>
+    @for (session of daySessions; track session) {
+    <app-session [session]="session"></app-session>
+    } @empty {
+    <div>There are no sessions.</div>
+    }
+  </nav>
+</section>
+} @else {
+<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+}

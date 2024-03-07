@@ -1,0 +1,22 @@
+@if(!isSearching){
+<button mat-button (click)="changeDate(today); resetSelectedTab()">
+  <mat-icon>today</mat-icon> Hoje
+</button>
+<mat-tab-group
+  @if
+  navDates
+  #tabGroup
+  (selectedTabChange)="tabChangeListener($event)"
+>
+  @for (date of navDates; track date) {
+  <mat-tab (click)="changeDate(date)">
+    <ng-template mat-tab-label
+      >{{ getDayOFTheWeek(date.getDay()) }} {{ date.getDate() }}</ng-template
+    >
+    <app-day-panel></app-day-panel>
+  </mat-tab>
+  }
+</mat-tab-group>
+} @else{
+<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+}

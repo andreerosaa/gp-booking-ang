@@ -1,0 +1,5 @@
+.navbar {
+  overflow: auto;
+  white-space: nowrap;
+  cursor: pointer;
+}
