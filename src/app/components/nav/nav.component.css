@@ -3,3 +3,8 @@
   white-space: nowrap;
   cursor: pointer;
 }
+
+.day-panel {
+  display: flex;
+  flex-direction: column;
+}
