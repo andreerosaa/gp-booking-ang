@@ -9,7 +9,7 @@ import { DateSelectionService } from '../../services/date-selection.service';
   styleUrl: './day-panel.component.css',
 })
 export class DayPanelComponent {
-  isSearching: boolean = false;
+  isSearching: boolean = true;
   daySessions: Session[] = [];
   constructor(
     private _sessionService: SessionService,
@@ -17,7 +17,7 @@ export class DayPanelComponent {
   ) {}
 
   ngOnInit(): void {
-    this.isSearching = false;
+    this.isSearching = true;
     this._dateSelectionService.selectedDate$.subscribe((date) => {
       this._sessionService.getSessionsForDate(date).subscribe((sessions) => {
         this.daySessions = sessions;
