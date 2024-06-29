@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { SessionService } from '../../services/session.service';
 import { DateSelectionService } from '../../services/date-selection.service';
-import { DaysOfTheWeek } from '../../models/daysOfTheWeek';
+import { DaysOfTheWeek } from '../../models/days-of-the-week';
 import { MatTabGroup } from '@angular/material/tabs';
 
 @Component({

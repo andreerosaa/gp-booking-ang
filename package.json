@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
     "angular": "^1.8.3",
+    "intl-tel-input": "^17.0.3",
+    "ngx-intl-tel-input-gg": "^1.0.10",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
